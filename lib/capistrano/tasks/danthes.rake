@@ -5,7 +5,6 @@ namespace :load do
   task :defaults do
     set :runit_danthes_role, -> { :app }
     set :runit_danthes_default_hooks, -> { true }
-    set :runit_danthes_run_template, File.expand_path('../../templates/run.erb', __FILE__)
     set :runit_danthes_threads_min, 0
     set :runit_danthes_threads_max, 16
     set :runit_danthes_rackup, -> { File.join(current_path, 'danthes.ru') }
